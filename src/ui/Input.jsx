@@ -7,4 +7,4 @@ const Input = styled.input`
   box-shadow: var(--shadow-sm);
 `;
 
-export { Input };
+export default Input;
