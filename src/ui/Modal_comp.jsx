@@ -65,7 +65,6 @@ function Modal({ children }) {
     <ModalContext.Provider value={{ open, close, openName }}>{children}</ModalContext.Provider>
   );
 }
-
 function Open({ children, opens: opensWindowName }) {
   const { open } = useContext(ModalContext);
   return cloneElement(children, { onclick: () => open(opensWindowName) });
