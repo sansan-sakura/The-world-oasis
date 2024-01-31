@@ -40,7 +40,8 @@ function Filter({filterField, options }) {
   const currentFilter=searchParamas.get(filterField)||options.at(0).value
 
   function handleClick(value) {
-    searchParamas.set("discount", value);
+    searchParamas.set(filterField, value);
+    if(searchParamas.get("page")) searchParamas.set("page",1)
     setSearchParams(searchParamas);
   }
   return (
